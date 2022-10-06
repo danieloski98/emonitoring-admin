@@ -11,12 +11,12 @@ import AddPost from './components/addPost'
 import React from 'react';
 
 function App() {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   return (
    <Box width="100vw" height="100vh" p="40px">
     <AddPost isOpen={open} close={() => setOpen(false)} />
     <Flex direction="column" flex="1" width="100%" height="100%" bg="#F7F9FB" borderRadius="20px" shadow="xl" boxShadow="2xl" overflow="hidden" px="40px" pb="20px">
-      <Navbar />
+      <Navbar open={() => setOpen(true)} />
 
       <Flex flex="1">
 
